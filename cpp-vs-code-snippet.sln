@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cpp-vs-code-snippet", "cpp-vs-code-snippet\cpp-vs-code-snippet.vcxproj", "{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enum-class", "enum-class\enum-class.vcxproj", "{224E909C-9028-4FE6-B441-839FB9608CFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Release|x64.Build.0 = Release|x64
 		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Release|x86.ActiveCfg = Release|Win32
 		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Release|x86.Build.0 = Release|Win32
+		{224E909C-9028-4FE6-B441-839FB9608CFD}.Debug|x64.ActiveCfg = Debug|x64
+		{224E909C-9028-4FE6-B441-839FB9608CFD}.Debug|x64.Build.0 = Debug|x64
+		{224E909C-9028-4FE6-B441-839FB9608CFD}.Debug|x86.ActiveCfg = Debug|Win32
+		{224E909C-9028-4FE6-B441-839FB9608CFD}.Debug|x86.Build.0 = Debug|Win32
+		{224E909C-9028-4FE6-B441-839FB9608CFD}.Release|x64.ActiveCfg = Release|x64
+		{224E909C-9028-4FE6-B441-839FB9608CFD}.Release|x64.Build.0 = Release|x64
+		{224E909C-9028-4FE6-B441-839FB9608CFD}.Release|x86.ActiveCfg = Release|Win32
+		{224E909C-9028-4FE6-B441-839FB9608CFD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
