@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "weak_ptr", "weak_ptr\weak_p
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shared_ptr", "shared_ptr\shared_ptr.vcxproj", "{40932D81-761B-4CDE-BB61-9FFCACD7D43F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "stl", "stl", "{574CDA66-8583-4656-89A4-879A258E7C26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -54,6 +56,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F932511B-4F9B-4A0E-A098-5CC918248203} = {574CDA66-8583-4656-89A4-879A258E7C26}
+		{40932D81-761B-4CDE-BB61-9FFCACD7D43F} = {574CDA66-8583-4656-89A4-879A258E7C26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {723B1B1A-FCFA-43D2-89E2-D4DBC40860AA}
