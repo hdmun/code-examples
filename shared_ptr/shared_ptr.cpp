@@ -55,6 +55,21 @@ void delete_first_raw_pointer()
 	std::cout << std::endl;
 }
 
+class base
+{
+	int _base{ 0 };
+};
+
+class derived : public base
+{
+	int _derived{ 1 };
+};
+
+void up_cast()
+{
+	std::shared_ptr<derived> pDerived = std::make_shared<derived>();
+	std::shared_ptr<base> pBase = pDerived;
+}
 
 int main()
 {
