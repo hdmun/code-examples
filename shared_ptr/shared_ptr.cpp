@@ -71,6 +71,29 @@ void up_cast()
 	std::shared_ptr<base> pBase = pDerived;
 }
 
+namespace shared_ptr_this {
+	class foo;
+	void arg_to_this( std::shared_ptr<foo> fromthis );
+
+	class foo : public std::enable_shared_from_this<foo>
+	{
+	public:
+		int n{ ++g_key };
+
+		void do_something()
+		{
+			arg_to_this( shared_from_this() );
+		}
+
+	private:
+		foo() = default;
+	};
+
+	void arg_to_this( std::shared_ptr<foo> fromthis )
+	{
+	}
+}
+
 int main()
 {
 	delete_first_shared_ptr();
