@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cpp-vs-code-snippet", "cpp-vs-code-snippet\cpp-vs-code-snippet.vcxproj", "{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enum-class", "enum-class\enum-class.vcxproj", "{224E909C-9028-4FE6-B441-839FB9608CFD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "weak_ptr", "weak_ptr\weak_ptr.vcxproj", "{F932511B-4F9B-4A0E-A098-5CC918248203}"
@@ -23,14 +21,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Debug|x64.ActiveCfg = Debug|x64
-		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Debug|x64.Build.0 = Debug|x64
-		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Debug|x86.ActiveCfg = Debug|Win32
-		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Debug|x86.Build.0 = Debug|Win32
-		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Release|x64.ActiveCfg = Release|x64
-		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Release|x64.Build.0 = Release|x64
-		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Release|x86.ActiveCfg = Release|Win32
-		{C3B7C637-1B3A-40F9-A1E3-CDDB5AA259DC}.Release|x86.Build.0 = Release|Win32
 		{224E909C-9028-4FE6-B441-839FB9608CFD}.Debug|x64.ActiveCfg = Debug|x64
 		{224E909C-9028-4FE6-B441-839FB9608CFD}.Debug|x64.Build.0 = Debug|x64
 		{224E909C-9028-4FE6-B441-839FB9608CFD}.Debug|x86.ActiveCfg = Debug|Win32
