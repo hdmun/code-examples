@@ -74,6 +74,7 @@ void up_cast()
 namespace shared_ptr_this {
 	class foo;
 	void arg_to_this( std::shared_ptr<foo> fromthis );
+	void arg_to_this_weak( std::weak_ptr<foo> fromthis );
 
 	class foo : public std::enable_shared_from_this<foo>
 	{
@@ -83,19 +84,27 @@ namespace shared_ptr_this {
 		void do_something()
 		{
 			arg_to_this( shared_from_this() );
+			arg_to_this_weak( shared_from_this() );
 		}
-
-	private:
-		foo() = default;
 	};
+
+	void run()
+	{
+		std::shared_ptr<foo> p = std::make_shared<foo>();
+		p->do_something();
+	}
 
 	void arg_to_this( std::shared_ptr<foo> fromthis )
 	{
+	}
+
+	void arg_to_this_weak( std::weak_ptr<foo> fromthis )
+	{
+		std::weak_ptr<foo> _assign = fromthis;
 	}
 }
 
 int main()
 {
-	delete_first_shared_ptr();
-	delete_first_raw_pointer();
+	shared_ptr_this::run();
 }
