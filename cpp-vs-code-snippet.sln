@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enum-class", "enum-class\enum-class.vcxproj", "{224E909C-9028-4FE6-B441-839FB9608CFD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enum-class", "C++11\enum-class\enum-class.vcxproj", "{224E909C-9028-4FE6-B441-839FB9608CFD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "weak_ptr", "stl\weak_ptr\weak_ptr.vcxproj", "{F932511B-4F9B-4A0E-A098-5CC918248203}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NamedPipeServer", "windows-api\NamedPipe\NamedPipeServer\NamedPipeServer.vcxproj", "{E39518FF-6475-4620-99E1-423AC7D76F73}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NamedPipeClient", "windows-api\NamedPipe\NamedPipeClient\NamedPipeClient.vcxproj", "{AD0402AE-ED25-4ADC-AF1E-DB2B4C788ECA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C++11", "C++11", "{B8EC5140-B2FA-41E5-9047-BE5A6F0F7BE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,6 +104,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{224E909C-9028-4FE6-B441-839FB9608CFD} = {B8EC5140-B2FA-41E5-9047-BE5A6F0F7BE5}
 		{F932511B-4F9B-4A0E-A098-5CC918248203} = {574CDA66-8583-4656-89A4-879A258E7C26}
 		{40932D81-761B-4CDE-BB61-9FFCACD7D43F} = {574CDA66-8583-4656-89A4-879A258E7C26}
 		{66C663D6-45B6-42EA-931D-853BF0212529} = {574CDA66-8583-4656-89A4-879A258E7C26}
