@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enum-class", "enum-class\enum-class.vcxproj", "{224E909C-9028-4FE6-B441-839FB9608CFD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "weak_ptr", "weak_ptr\weak_ptr.vcxproj", "{F932511B-4F9B-4A0E-A098-5CC918248203}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "weak_ptr", "stl\weak_ptr\weak_ptr.vcxproj", "{F932511B-4F9B-4A0E-A098-5CC918248203}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shared_ptr", "shared_ptr\shared_ptr.vcxproj", "{40932D81-761B-4CDE-BB61-9FFCACD7D43F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shared_ptr", "stl\shared_ptr\shared_ptr.vcxproj", "{40932D81-761B-4CDE-BB61-9FFCACD7D43F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "stl", "stl", "{574CDA66-8583-4656-89A4-879A258E7C26}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list", "list\list.vcxproj", "{66C663D6-45B6-42EA-931D-853BF0212529}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list", "stl\list\list.vcxproj", "{66C663D6-45B6-42EA-931D-853BF0212529}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "windows-api", "windows-api", "{B9DC8596-D959-45E3-886B-6BA2F31AB911}"
 EndProject
