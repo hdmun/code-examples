@@ -29,6 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C++11", "C++11", "{B8EC5140
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "string", "stl\string\string.vcxproj", "{52FB7D97-EE20-4D4E-B179-2D8A3FD082A1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library", "library", "{72E36D73-F0FE-4151-B773-7E6F52A27930}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsoncpp_test", "library\jsoncpp_test\jsoncpp_test.vcxproj", "{415B140C-879F-4288-89DB-E69588436A40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -109,6 +113,14 @@ Global
 		{52FB7D97-EE20-4D4E-B179-2D8A3FD082A1}.Release|x64.Build.0 = Release|x64
 		{52FB7D97-EE20-4D4E-B179-2D8A3FD082A1}.Release|x86.ActiveCfg = Release|Win32
 		{52FB7D97-EE20-4D4E-B179-2D8A3FD082A1}.Release|x86.Build.0 = Release|Win32
+		{415B140C-879F-4288-89DB-E69588436A40}.Debug|x64.ActiveCfg = Debug|x64
+		{415B140C-879F-4288-89DB-E69588436A40}.Debug|x64.Build.0 = Debug|x64
+		{415B140C-879F-4288-89DB-E69588436A40}.Debug|x86.ActiveCfg = Debug|Win32
+		{415B140C-879F-4288-89DB-E69588436A40}.Debug|x86.Build.0 = Debug|Win32
+		{415B140C-879F-4288-89DB-E69588436A40}.Release|x64.ActiveCfg = Release|x64
+		{415B140C-879F-4288-89DB-E69588436A40}.Release|x64.Build.0 = Release|x64
+		{415B140C-879F-4288-89DB-E69588436A40}.Release|x86.ActiveCfg = Release|Win32
+		{415B140C-879F-4288-89DB-E69588436A40}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +135,7 @@ Global
 		{E39518FF-6475-4620-99E1-423AC7D76F73} = {F759DBC4-B890-44E9-9981-1E5EF67C5CB3}
 		{AD0402AE-ED25-4ADC-AF1E-DB2B4C788ECA} = {F759DBC4-B890-44E9-9981-1E5EF67C5CB3}
 		{52FB7D97-EE20-4D4E-B179-2D8A3FD082A1} = {574CDA66-8583-4656-89A4-879A258E7C26}
+		{415B140C-879F-4288-89DB-E69588436A40} = {72E36D73-F0FE-4151-B773-7E6F52A27930}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {723B1B1A-FCFA-43D2-89E2-D4DBC40860AA}
