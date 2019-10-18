@@ -29,9 +29,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C++11", "C++11", "{B8EC5140
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "string", "stl\string\string.vcxproj", "{52FB7D97-EE20-4D4E-B179-2D8A3FD082A1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library", "library", "{72E36D73-F0FE-4151-B773-7E6F52A27930}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "opensource", "opensource", "{72E36D73-F0FE-4151-B773-7E6F52A27930}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsoncpp_test", "library\jsoncpp_test\jsoncpp_test.vcxproj", "{415B140C-879F-4288-89DB-E69588436A40}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsoncpp_test", "opensource\jsoncpp_test\jsoncpp_test.vcxproj", "{415B140C-879F-4288-89DB-E69588436A40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
