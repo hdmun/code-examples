@@ -41,8 +41,31 @@ void store_list_iter()
 	std::cout << "list_.size: " << list_.size() << ", it_store->member: " << it_store->member << std::endl;
 }
 
+namespace _move {
+void to_another_list()
+{
+	std::list<foo> list_;
+	for ( int i = 0; i < 10; i++ )
+		list_.push_back( foo() );
+
+	std::cout << "print `list_` before move" << std::endl;
+	for ( auto& elem : list_ )
+		std::cout << &elem << ", " << elem.member << std::endl;
+
+	std::list<foo> list_move_ = std::move( list_ );
+
+	std::cout << "print `list_move_` after move" << std::endl;
+	for ( auto& elem : list_move_ )
+		std::cout << &elem << ", " << elem.member << std::endl;
+
+	std::cout << "print `list_` after move" << std::endl;
+	for ( auto& elem : list_ )
+		std::cout << &elem << ", " << elem.member << std::endl;
+}
+}
 
 int main()
 {
-	store_list_iter();
+	// store_list_iter();
+	_move::to_another_list();
 }
