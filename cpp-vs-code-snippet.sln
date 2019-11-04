@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IPToDWORD", "windows-api\IP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "constructor", "constructor\constructor.vcxproj", "{EE4C433F-8417-4B20-989E-FA81F4B082BA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mutex", "stl\mutex\mutex.vcxproj", "{55691524-73A0-460E-BD81-D4FEB6700E70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -163,6 +165,14 @@ Global
 		{EE4C433F-8417-4B20-989E-FA81F4B082BA}.Release|x64.Build.0 = Release|x64
 		{EE4C433F-8417-4B20-989E-FA81F4B082BA}.Release|x86.ActiveCfg = Release|Win32
 		{EE4C433F-8417-4B20-989E-FA81F4B082BA}.Release|x86.Build.0 = Release|Win32
+		{55691524-73A0-460E-BD81-D4FEB6700E70}.Debug|x64.ActiveCfg = Debug|x64
+		{55691524-73A0-460E-BD81-D4FEB6700E70}.Debug|x64.Build.0 = Debug|x64
+		{55691524-73A0-460E-BD81-D4FEB6700E70}.Debug|x86.ActiveCfg = Debug|Win32
+		{55691524-73A0-460E-BD81-D4FEB6700E70}.Debug|x86.Build.0 = Debug|Win32
+		{55691524-73A0-460E-BD81-D4FEB6700E70}.Release|x64.ActiveCfg = Release|x64
+		{55691524-73A0-460E-BD81-D4FEB6700E70}.Release|x64.Build.0 = Release|x64
+		{55691524-73A0-460E-BD81-D4FEB6700E70}.Release|x86.ActiveCfg = Release|Win32
+		{55691524-73A0-460E-BD81-D4FEB6700E70}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -184,6 +194,7 @@ Global
 		{F90DD3E2-B2DC-49EF-ADC9-595899982DCB} = {B9DC8596-D959-45E3-886B-6BA2F31AB911}
 		{7AFC44BF-C523-4120-951A-46C2257B07E5} = {B9DC8596-D959-45E3-886B-6BA2F31AB911}
 		{74732C80-F604-4C72-8B5D-EE5CD234847A} = {7AFC44BF-C523-4120-951A-46C2257B07E5}
+		{55691524-73A0-460E-BD81-D4FEB6700E70} = {574CDA66-8583-4656-89A4-879A258E7C26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {723B1B1A-FCFA-43D2-89E2-D4DBC40860AA}
