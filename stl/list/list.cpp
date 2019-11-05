@@ -50,22 +50,61 @@ void to_another_list()
 
 	std::cout << "print `list_` before move" << std::endl;
 	for ( auto& elem : list_ )
-		std::cout << &elem << ", " << elem.member << std::endl;
+		std::cout << "list_: " << &elem << ", " << elem.member << std::endl;
 
 	std::list<foo> list_move_ = std::move( list_ );
 
 	std::cout << "print `list_move_` after move" << std::endl;
 	for ( auto& elem : list_move_ )
-		std::cout << &elem << ", " << elem.member << std::endl;
+		std::cout << "list_move_: " << &elem << ", " << elem.member << std::endl;
 
 	std::cout << "print `list_` after move" << std::endl;
 	for ( auto& elem : list_ )
-		std::cout << &elem << ", " << elem.member << std::endl;
+		std::cout << "list_: " << &elem << ", " << elem.member << std::endl;
 }
+
+void add_to_another_list()
+{
+	std::cout << std::endl << __FUNCTION__ << std::endl;
+
+	std::list<foo> list_;
+	for ( int i = 0; i < 10; i++ )
+		list_.push_back( foo() );
+
+	std::cout << "print `list_` before move" << std::endl;
+	for ( auto& elem : list_ )
+		std::cout << "list_: " << &elem << ", " << elem.member << std::endl;
+
+	std::list<foo> list_move_;
+	std::copy( list_.begin(), list_.end(), std::back_inserter( list_move_ ) );
+	for ( auto& iter : list_move_ ) {
+		iter.member += 100;
+	}
+
+	std::cout << "print `list_` after copy" << std::endl;
+	for ( auto& elem : list_ )
+		std::cout << "list_: " << &elem << ", " << elem.member << std::endl;
+
+	// 흠 move 가 안먹히는군
+	list_move_.insert( list_move_.begin(),
+		std::make_move_iterator( list_.begin() ),
+		std::make_move_iterator( list_.end() ) );
+
+	std::cout << "print `list_move_` after insert move" << std::endl;
+	for ( auto& elem : list_move_ )
+		std::cout << "list_move_: " << &elem << ", " << elem.member << std::endl;
+
+	std::cout << "print `list_` after insert move" << std::endl;
+	for ( auto& elem : list_ )
+		std::cout << "list_: " << &elem << ", " << elem.member << std::endl;
+
+}
+
 }
 
 int main()
 {
 	// store_list_iter();
-	_move::to_another_list();
+	//_move::to_another_list();
+	_move::add_to_another_list();
 }
