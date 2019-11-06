@@ -24,6 +24,9 @@
     <ClCompile Include="google-flatbuffer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="packet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="flatbuffers-1.11.0\include\flatbuffers\base.h">
@@ -68,8 +71,14 @@
     <ClInclude Include="flatbuffers-1.11.0\include\flatbuffers\util.h">
       <Filter>flatbuffers-1.11.0</Filter>
     </ClInclude>
-    <ClInclude Include="protocol\user_generated.h">
-      <Filter>protocol</Filter>
+    <ClInclude Include="packet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="protocol\monster_generated.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="protocol\version_generated.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

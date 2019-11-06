@@ -1,0 +1,8 @@
+namespace protocol;
+
+table Version {
+    major:int;
+    minor:int;
+}
+
+root_type Version;
