@@ -75,10 +75,10 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="protocol\monster_generated.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>protocol</Filter>
     </ClInclude>
     <ClInclude Include="protocol\version_generated.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>protocol</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
