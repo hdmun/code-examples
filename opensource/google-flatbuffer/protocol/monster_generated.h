@@ -117,28 +117,40 @@ FLATBUFFERS_STRUCT_END(Vec3, 12);
 
 struct Monster FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
-    VT_POS = 4,
-    VT_MANA = 6,
+    VT_ID = 4,
+    VT_NAME = 6,
     VT_HP = 8,
-    VT_NAME = 10,
-    VT_INVENTORY = 14,
-    VT_COLOR = 16,
-    VT_WEAPONS = 18,
-    VT_EQUIPPED_TYPE = 20,
-    VT_EQUIPPED = 22,
-    VT_PATH = 24
+    VT_MANA = 10,
+    VT_EXP = 12,
+    VT_BOSS = 14,
+    VT_POS = 16,
+    VT_INVENTORY = 20,
+    VT_COLOR = 22,
+    VT_WEAPONS = 24,
+    VT_EQUIPPED_TYPE = 26,
+    VT_EQUIPPED = 28,
+    VT_PATH = 30
   };
-  const Vec3 *pos() const {
-    return GetStruct<const Vec3 *>(VT_POS);
-  }
-  int16_t mana() const {
-    return GetField<int16_t>(VT_MANA, 150);
-  }
-  int16_t hp() const {
-    return GetField<int16_t>(VT_HP, 100);
+  int32_t id() const {
+    return GetField<int32_t>(VT_ID, 0);
   }
   const flatbuffers::String *name() const {
     return GetPointer<const flatbuffers::String *>(VT_NAME);
+  }
+  int32_t hp() const {
+    return GetField<int32_t>(VT_HP, 1);
+  }
+  int32_t mana() const {
+    return GetField<int32_t>(VT_MANA, 1);
+  }
+  int32_t exp() const {
+    return GetField<int32_t>(VT_EXP, 1);
+  }
+  bool boss() const {
+    return GetField<uint8_t>(VT_BOSS, 0) != 0;
+  }
+  const Vec3 *pos() const {
+    return GetStruct<const Vec3 *>(VT_POS);
   }
   const flatbuffers::Vector<uint8_t> *inventory() const {
     return GetPointer<const flatbuffers::Vector<uint8_t> *>(VT_INVENTORY);
@@ -164,11 +176,14 @@ struct Monster FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
   }
   bool Verify(flatbuffers::Verifier &verifier) const {
     return VerifyTableStart(verifier) &&
-           VerifyField<Vec3>(verifier, VT_POS) &&
-           VerifyField<int16_t>(verifier, VT_MANA) &&
-           VerifyField<int16_t>(verifier, VT_HP) &&
+           VerifyField<int32_t>(verifier, VT_ID) &&
            VerifyOffset(verifier, VT_NAME) &&
            verifier.VerifyString(name()) &&
+           VerifyField<int32_t>(verifier, VT_HP) &&
+           VerifyField<int32_t>(verifier, VT_MANA) &&
+           VerifyField<int32_t>(verifier, VT_EXP) &&
+           VerifyField<uint8_t>(verifier, VT_BOSS) &&
+           VerifyField<Vec3>(verifier, VT_POS) &&
            VerifyOffset(verifier, VT_INVENTORY) &&
            verifier.VerifyVector(inventory()) &&
            VerifyField<int8_t>(verifier, VT_COLOR) &&
@@ -191,17 +206,26 @@ template<> inline const Weapon *Monster::equipped_as<Weapon>() const {
 struct MonsterBuilder {
   flatbuffers::FlatBufferBuilder &fbb_;
   flatbuffers::uoffset_t start_;
-  void add_pos(const Vec3 *pos) {
-    fbb_.AddStruct(Monster::VT_POS, pos);
-  }
-  void add_mana(int16_t mana) {
-    fbb_.AddElement<int16_t>(Monster::VT_MANA, mana, 150);
-  }
-  void add_hp(int16_t hp) {
-    fbb_.AddElement<int16_t>(Monster::VT_HP, hp, 100);
+  void add_id(int32_t id) {
+    fbb_.AddElement<int32_t>(Monster::VT_ID, id, 0);
   }
   void add_name(flatbuffers::Offset<flatbuffers::String> name) {
     fbb_.AddOffset(Monster::VT_NAME, name);
+  }
+  void add_hp(int32_t hp) {
+    fbb_.AddElement<int32_t>(Monster::VT_HP, hp, 1);
+  }
+  void add_mana(int32_t mana) {
+    fbb_.AddElement<int32_t>(Monster::VT_MANA, mana, 1);
+  }
+  void add_exp(int32_t exp) {
+    fbb_.AddElement<int32_t>(Monster::VT_EXP, exp, 1);
+  }
+  void add_boss(bool boss) {
+    fbb_.AddElement<uint8_t>(Monster::VT_BOSS, static_cast<uint8_t>(boss), 0);
+  }
+  void add_pos(const Vec3 *pos) {
+    fbb_.AddStruct(Monster::VT_POS, pos);
   }
   void add_inventory(flatbuffers::Offset<flatbuffers::Vector<uint8_t>> inventory) {
     fbb_.AddOffset(Monster::VT_INVENTORY, inventory);
@@ -235,10 +259,13 @@ struct MonsterBuilder {
 
 inline flatbuffers::Offset<Monster> CreateMonster(
     flatbuffers::FlatBufferBuilder &_fbb,
-    const Vec3 *pos = 0,
-    int16_t mana = 150,
-    int16_t hp = 100,
+    int32_t id = 0,
     flatbuffers::Offset<flatbuffers::String> name = 0,
+    int32_t hp = 1,
+    int32_t mana = 1,
+    int32_t exp = 1,
+    bool boss = false,
+    const Vec3 *pos = 0,
     flatbuffers::Offset<flatbuffers::Vector<uint8_t>> inventory = 0,
     Color color = Color_Blue,
     flatbuffers::Offset<flatbuffers::Vector<flatbuffers::Offset<Weapon>>> weapons = 0,
@@ -250,21 +277,27 @@ inline flatbuffers::Offset<Monster> CreateMonster(
   builder_.add_equipped(equipped);
   builder_.add_weapons(weapons);
   builder_.add_inventory(inventory);
-  builder_.add_name(name);
   builder_.add_pos(pos);
-  builder_.add_hp(hp);
+  builder_.add_exp(exp);
   builder_.add_mana(mana);
+  builder_.add_hp(hp);
+  builder_.add_name(name);
+  builder_.add_id(id);
   builder_.add_equipped_type(equipped_type);
   builder_.add_color(color);
+  builder_.add_boss(boss);
   return builder_.Finish();
 }
 
 inline flatbuffers::Offset<Monster> CreateMonsterDirect(
     flatbuffers::FlatBufferBuilder &_fbb,
-    const Vec3 *pos = 0,
-    int16_t mana = 150,
-    int16_t hp = 100,
+    int32_t id = 0,
     const char *name = nullptr,
+    int32_t hp = 1,
+    int32_t mana = 1,
+    int32_t exp = 1,
+    bool boss = false,
+    const Vec3 *pos = 0,
     const std::vector<uint8_t> *inventory = nullptr,
     Color color = Color_Blue,
     const std::vector<flatbuffers::Offset<Weapon>> *weapons = nullptr,
@@ -277,10 +310,13 @@ inline flatbuffers::Offset<Monster> CreateMonsterDirect(
   auto path__ = path ? _fbb.CreateVectorOfStructs<Vec3>(*path) : 0;
   return protocol::CreateMonster(
       _fbb,
-      pos,
-      mana,
-      hp,
+      id,
       name__,
+      hp,
+      mana,
+      exp,
+      boss,
+      pos,
       inventory__,
       color,
       weapons__,
