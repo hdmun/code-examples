@@ -100,6 +100,27 @@ void add_to_another_list()
 
 }
 
+}  // end of namespace _move {
+
+void remove_if()
+{
+	std::list<int> list_remove;
+	for (int i = 0; i < 10; i++) {
+		list_remove.push_back(i);
+	}
+	list_remove.push_back(0);
+
+	std::cout << list_remove.size() << std::endl;
+
+	for (auto& elem : list_remove)
+		std::cout << elem << " ";
+	std::cout << std::endl;
+
+	list_remove.remove_if([](auto& elem) {
+		return elem == 0;
+		});
+
+	std::cout << list_remove.size() << std::endl;
 }
 
 int main()
@@ -107,4 +128,5 @@ int main()
 	// store_list_iter();
 	//_move::to_another_list();
 	_move::add_to_another_list();
+	remove_if();
 }
