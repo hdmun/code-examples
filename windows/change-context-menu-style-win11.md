@@ -11,6 +11,9 @@ Windows Registry Editor Version 5.00
 @=""
 ```
 
+`explorer.exe` 프로세스 종료 후 재실행하면 적용
+
+
 ## 원복 스크립트
 
 레지스트리 추가 했던걸 삭제
