@@ -16,7 +16,10 @@ layout: tasks/compress
         {%- include common/links.liquid -%}
         {%- include rest/styles.liquid -%}
         {%- include common/script.liquid -%}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1277792897041775" crossorigin="anonymous"></script>
+        
+        {%- include common/google_gtag.liquid-%}
+        {%- include common/google_adsense.liquid-%}
+
     </head>
     <body class="container">
         {%- include templates/sidebar.liquid -%}
@@ -24,7 +27,5 @@ layout: tasks/compress
         {% comment %}{%- include templates/addons.liquid -%}{% endcomment %}
         {%- include rest/script.liquid -%}
         {%- include common/mermaid.liquid-%}
-        {%- include common/google_gtag.liquid-%}
-        {%- include common/google_adsense.liquid-%}
     </body>
 </html>

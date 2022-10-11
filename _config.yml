@@ -8,6 +8,10 @@ theme: null
 #   dist: false
 #   shortcodes: true
 
+google:
+  adsense: ca-pub-1277792897041775
+  gtag: UA-144729693-1
+
 readme_index:
   with_frontmatter: true
 
