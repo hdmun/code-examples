@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29230.47
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enum-class", "C++11\enum-class\enum-class.vcxproj", "{224E909C-9028-4FE6-B441-839FB9608CFD}"
 EndProject
@@ -72,6 +72,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filesystem", "stl\filesystem\filesystem.vcxproj", "{8DE79D79-4A09-40AF-8AA8-380D3DDF649A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "instance-return", "C++11\instance-return\instance-return.vcxproj", "{A2CA983D-90E5-4EF9-925D-75A2AFC47F4A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "casting", "casting\casting.vcxproj", "{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -297,6 +299,14 @@ Global
 		{A2CA983D-90E5-4EF9-925D-75A2AFC47F4A}.Release|x64.Build.0 = Release|x64
 		{A2CA983D-90E5-4EF9-925D-75A2AFC47F4A}.Release|x86.ActiveCfg = Release|Win32
 		{A2CA983D-90E5-4EF9-925D-75A2AFC47F4A}.Release|x86.Build.0 = Release|Win32
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}.Debug|x64.ActiveCfg = Debug|x64
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}.Debug|x64.Build.0 = Debug|x64
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}.Debug|x86.ActiveCfg = Debug|Win32
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}.Debug|x86.Build.0 = Debug|Win32
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}.Release|x64.ActiveCfg = Release|x64
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}.Release|x64.Build.0 = Release|x64
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}.Release|x86.ActiveCfg = Release|Win32
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -328,6 +338,7 @@ Global
 		{AD577AA7-02A1-4630-97A5-3C1C90B34432} = {5C2AB9CE-E69A-4BC2-907B-75FE7C8CD3DC}
 		{8DE79D79-4A09-40AF-8AA8-380D3DDF649A} = {574CDA66-8583-4656-89A4-879A258E7C26}
 		{A2CA983D-90E5-4EF9-925D-75A2AFC47F4A} = {B8EC5140-B2FA-41E5-9047-BE5A6F0F7BE5}
+		{E93752F5-2BAF-41FD-9A92-4E0707CB52DD} = {B8EC5140-B2FA-41E5-9047-BE5A6F0F7BE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {723B1B1A-FCFA-43D2-89E2-D4DBC40860AA}
