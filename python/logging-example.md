@@ -1,8 +1,4 @@
-
-from sys import pycache_prefix
-
-# logging 사용하기
-
+# logging 모듈 사용하기
 
 ```python
 import logging
