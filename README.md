@@ -12,3 +12,11 @@
 이 페이지는 아래 지킬 테마 기반으로 제작되었습니다.
 
 [rundocs/jekyll-rtd-theme](https://github.com/rundocs/jekyll-rtd-theme)
+
+## Setup
+
+```powershell
+winget install RubyInstallerTeam.RubyWithDevkit.3.4
+
+bundle install
+```

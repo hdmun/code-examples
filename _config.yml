@@ -3,10 +3,10 @@ description: Programing Language Code Example Site
 
 theme: null
 
-# debug:
-#   compress: true
-#   dist: false
-#   shortcodes: true
+debug:
+  compress: true
+  dist: false
+  shortcodes: true
 
 google:
   adsense: ca-pub-1277792897041775
